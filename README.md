@@ -1,310 +1,275 @@
-# 🔥 TorchBearer
+# TorchBearer — Event Discovery & Management Platform
 
-> **A Java-based Event Discovery and Management Platform connecting event organizers and travellers through a single web application.**
+A Java-based web application that connects event organizers and travellers through a centralized platform for event discovery, reservations, and event management.
 
 ![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
 ![JSP](https://img.shields.io/badge/JSP-Web-blue?style=for-the-badge)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql)
-![Apache Tomcat](https://img.shields.io/badge/Apache-Tomcat-F8DC75?style=for-the-badge&logo=apachetomcat)
-![License](https://img.shields.io/badge/Academic_Project-2024--25-success?style=for-the-badge)
+![Apache Tomcat](https://img.shields.io/badge/Apache_Tomcat-10-F8DC75?style=for-the-badge&logo=apachetomcat)
+![Project](https://img.shields.io/badge/Project-Academic-success?style=for-the-badge)
 
 ---
 
-# 📖 About
+## About
 
-TorchBearer is a **Java-based Event Discovery and Management System** developed as a mini-project for the Department of Information Technology.
+TorchBearer is an event discovery and management platform developed as an academic mini-project for the Department of Information Technology. It provides travellers with a convenient way to discover events, manage bookings, interact with event listings, and explore nearby eateries, while allowing organizers to publish and manage events.
 
-The platform aims to bridge the gap between **event organizers** and **travellers** by providing a centralized platform where organizers can publish events while travellers can easily discover, explore, and book them.
+The application provides separate functionalities for travellers and organizers through a role-based architecture, making event discovery and management accessible through a single web application.
 
-The application follows a **role-based architecture**, providing separate functionalities for Organizers and Travellers to ensure a seamless and personalized user experience.
+## Features
 
----
+### Traveller
 
-# ✨ Features
+- **User Authentication:** Register an account and log in to access traveller features.
+- **Event Discovery:** Browse upcoming events and explore available activities.
+- **Event Search:** Search for events and view relevant event information.
+- **Event Reservations:** Book events and cancel existing reservations.
+- **Event Interaction:** Like and comment on event listings.
+- **Nearby Eateries:** Explore dining options around event destinations.
+- **Restaurant Reservations:** Reserve tables at available eateries.
+- **Profile Management:** Update personal information and change passwords.
+- **Feedback System:** Submit feedback about the platform and its services.
 
-## 👤 Traveller
+### Event Organizer
 
-- User Registration & Login
-- Browse Upcoming Events
-- Search Events
-- View Event Details
-- Book Events
-- Cancel Bookings
-- Like Events
-- Comment on Events
-- Explore Nearby Eateries
-- Reserve Restaurant Tables
-- Profile Management
-- Change Password
-- Feedback System
+- **Organizer Authentication:** Log in to access organizer-specific functionality.
+- **Event Publishing:** Create event listings with descriptions and relevant details.
+- **Event Image Uploads:** Add images to event listings.
+- **Event Management:** View, update, and manage published events.
+- **Profile Management:** Update organizer information and change passwords.
+- **Feedback System:** Submit feedback about the application.
+- **About Us:** Access information about the platform.
 
----
+## Technology Stack
 
-## 🎉 Organizer
+| Component | Technologies |
+|---|---|
+| Frontend | JSP, HTML5, CSS3, JavaScript |
+| Backend | Java Servlets, JavaBeans, JDBC |
+| Application Architecture | DAO (Data Access Object) |
+| Database | MySQL |
+| Web Server | Apache Tomcat 10 |
+| Development Environment | Apache NetBeans |
 
-- Secure Login
-- Upload New Events
-- Add Event Images
-- Add Event Details
-- Manage Events
-- Update Profile
-- Change Password
-- Feedback System
-- About Us Section
+## Project Structure
 
----
-
-# 🚀 Tech Stack
-
-## Frontend
-
-- JSP (Java Server Pages)
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-
-- Java Servlets
-- JDBC
-- Java Beans
-- DAO Architecture
-
-## Database
-
-- MySQL
-
-## Server
-
-- Apache Tomcat 10
-
-## IDE
-
-- Apache NetBeans
-
----
-
-# 🏗️ System Architecture
-
-The following diagram illustrates the workflow of the TorchBearer platform.
-
-<p align="center">
-    <img src="assets/architecture.png" width="900">
-</p>
-
-### Workflow
-
-```
-User
-   │
-   ▼
-Login / Signup
-   │
-   ├──────────────┐
-   ▼              ▼
-Traveller     Organizer
-   │              │
-Browse Events  Upload Events
-Book Events    Manage Events
-Eateries       Profile Settings
-Feedback       About Us
-```
-
----
-
-# 📸 Application Screenshots
-
-## 🔐 Login Page
-
-<p align="center">
-<img src="assets/login.png" width="900">
-</p>
-
-The Login page authenticates registered users and allows them to securely access the platform.
-
----
-
-## 📝 Sign Up Page
-
-<p align="center">
-<img src="assets/signup.png" width="900">
-</p>
-
-New users can register by entering their username, email address, and password before accessing the platform.
-
----
-
-## 👥 Role Selection
-
-<p align="center">
-<img src="assets/role-selection.png" width="900">
-</p>
-
-After logging in, users can continue either as a **Traveller** or an **Organizer**, giving access to role-specific functionalities.
-
----
-
-# 📌 Core Functionalities
-
-✅ Secure User Authentication
-
-✅ Role-Based Access Control
-
-✅ Event Creation & Management
-
-✅ Event Discovery
-
-✅ Event Booking
-
-✅ Nearby Eateries
-
-✅ Restaurant Reservation
-
-✅ Event Likes & Comments
-
-✅ Profile Management
-
-✅ Feedback Collection
-
----
-
-# 📂 Project Structure
+The project follows a Java web application structure, separating Java source code, web resources, configuration files, and project assets.
 
 ```text
 TorchBearer/
-│
-├── src/
-│   ├── Bean/
-│   ├── Dao/
-│   ├── Servlet/
-│
-├── WebContent/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   ├── *.jsp
-│
 ├── assets/
 │   ├── architecture.png
 │   ├── login.png
 │   ├── signup.png
 │   └── role-selection.png
-│
-├── database/
-│   └── torchbearer.sql
-│
+├── nbproject/
+├── src/
+│   ├── conf/
+│   ├── java/
+│   └── web/
 ├── README.md
-│
-└── web.xml
+└── ...
 ```
 
----
+*Note: This is an illustrative structure. The actual directory names may differ depending on the project configuration.*
 
-# ⚙️ Installation
+## System Architecture
 
-## 1️⃣ Clone the Repository
+The following diagram illustrates the high-level workflow of TorchBearer, from user authentication to role-specific functionality.
+
+<p align="center">
+  <img src="assets/architecture.png" width="900" alt="TorchBearer system architecture">
+</p>
+
+### Application Workflow
+
+```text
+                   User
+                     |
+                     v
+              Login / Signup
+                     |
+                     v
+                Role Selection
+                 /         \
+                v           v
+           Traveller     Organizer
+                |           |
+          Browse Events  Publish Events
+          Search Events  Manage Events
+          Book Events    Upload Images
+          Explore Food   Update Profile
+          Give Feedback  Give Feedback
+                |           |
+                +-----+-----+
+                      |
+                      v
+                MySQL Database
+```
+
+The workflow represents the intended application flow. Actual database interactions and access controls depend on the implemented Java classes and configuration.
+
+## Application Screenshots
+
+### Login Page
+
+<p align="center">
+  <img src="assets/login.png" width="900" alt="TorchBearer login page">
+</p>
+
+The login interface allows registered users to authenticate and access the platform.
+
+### Sign Up Page
+
+<p align="center">
+  <img src="assets/signup.png" width="900" alt="TorchBearer sign-up page">
+</p>
+
+The registration interface enables new users to create an account by providing the required information.
+
+### Role Selection
+
+<p align="center">
+  <img src="assets/role-selection.png" width="900" alt="TorchBearer role selection page">
+</p>
+
+The role selection interface allows users to choose between Traveller and Organizer, providing access to the relevant application features.
+
+## Core Functionalities
+
+- User registration and login
+- Role-based application interfaces
+- Event creation and management
+- Event discovery and search
+- Event booking and cancellation
+- Event likes and comments
+- Nearby eateries and restaurant reservations
+- User and organizer profile management
+- Feedback collection
+
+## Installation and Setup
+
+### Prerequisites
+
+Ensure the following software is installed:
+
+- Java Development Kit (JDK) compatible with the project
+- Apache NetBeans or another compatible Java IDE
+- Apache Tomcat compatible with the project's Servlet and JSP APIs
+- MySQL Server
+- MySQL Connector/J JDBC driver
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/TorchBearer.git
+git clone https://github.com/bhoooomi05/TorchBearer.git
+cd TorchBearer
 ```
 
----
+### 2. Open the Project
 
-## 2️⃣ Open the Project
+Open Apache NetBeans and import or open the cloned project directory.
 
-Import the project into:
+Check the project configuration to identify the correct web application root and build settings.
 
-- Apache NetBeans
-- Eclipse IDE
+### 3. Configure the MySQL Database
 
----
-
-## 3️⃣ Create the Database
+Create the database using the name expected by the application:
 
 ```sql
 CREATE DATABASE torchbearer;
 ```
 
-Import the SQL file:
+If the repository contains a database export, import it into MySQL. For example:
 
+```bash
+mysql -u root -p torchbearer < database/torchbearer.sql
 ```
-database/torchbearer.sql
-```
 
----
+The command assumes that `database/torchbearer.sql` exists in the repository. Use the actual SQL file path if it differs.
 
-## 4️⃣ Configure Database Credentials
+If no database export is available, obtain the required schema and initial data before running the application.
 
-Update the database credentials inside:
+### 4. Configure Database Connectivity
 
-```
-DatabaseConnection.java
-```
+Locate the Java class responsible for database connectivity. It may be named `DatabaseConnection.java` or something similar.
+
+Configure the connection URL, username, and password according to your local MySQL setup.
+
+Example configuration:
 
 ```java
-private static final String URL = "jdbc:mysql://localhost:3306/torchbearer";
+private static final String URL =
+    "jdbc:mysql://localhost:3306/torchbearer";
+
 private static final String USER = "root";
-private static final String PASSWORD = "your_password";
+
+private static final String PASSWORD = "your_local_password";
 ```
 
----
+Replace the example credentials with your own local settings. Do not commit real database passwords or other secrets to GitHub.
 
-## 5️⃣ Configure Apache Tomcat
+Ensure that MySQL Connector/J is included in the project's dependencies.
 
-- Install Apache Tomcat 10+
-- Add Tomcat Server in NetBeans
-- Deploy the project
+### 5. Configure Apache Tomcat
 
----
+1. Add a compatible Tomcat server to your IDE.
+2. Verify that the project's Java and Servlet API versions match the selected server.
+3. Configure the application deployment settings.
+4. Confirm that the database server is running.
 
-## 6️⃣ Run the Project
+### 6. Build and Run
 
-```
+Build the project in NetBeans and deploy it to Tomcat.
+
+Open the application using the local URL assigned by the server. A typical URL might be:
+
+```text
 http://localhost:8080/TorchBearer/
 ```
 
----
+The context path may differ depending on the deployment configuration.
 
-# 🔒 Security
+## Security Considerations
 
-- Secure Login Authentication
-- JDBC Prepared Statements
-- Session Management
-- Role-Based Access Control
+The application should follow these practices when handling user accounts and database access:
 
----
+- **Authentication:** Validate user credentials before granting access.
+- **Password Security:** Store passwords using a suitable salted password-hashing algorithm rather than plain text.
+- **Prepared Statements:** Use JDBC prepared statements to reduce SQL injection risks.
+- **Session Management:** Manage user sessions securely and invalidate them during logout.
+- **Role-Based Authorization:** Enforce permissions on the server side for traveller and organizer operations.
+- **Credential Protection:** Keep database credentials and other secrets out of public repositories.
+- **Input Validation:** Validate user input and uploaded files before processing them.
 
-# 🎯 Future Enhancements
+These are recommended security practices; their actual implementation should be verified against the source code.
 
-- 💳 Payment Gateway Integration
-- 🤖 AI-Based Event Recommendation System
-- 📍 Google Maps Integration
-- 🔔 Email & SMS Notifications
-- 📱 Android/iOS Mobile Application
-- 🌐 Social Media Integration
-- ⭐ Event Rating & Reviews
-- 📊 Analytics Dashboard
-- 🎟 QR Code Based Event Check-In
+## Future Enhancements
 
----
+Potential enhancements that could extend TorchBearer include:
 
-# 👨‍💻 Team
+- **Online Payments:** Integrate a payment gateway for paid event reservations.
+- **AI-Based Recommendations:** Suggest events based on user preferences and interests.
+- **Interactive Maps:** Integrate mapping services to display event locations and nearby places.
+- **Notifications:** Send booking confirmations and event reminders through email or SMS.
+- **Mobile Application:** Develop Android and iOS applications for improved accessibility.
+- **Social Media Integration:** Enable event sharing and social engagement.
+- **Ratings and Reviews:** Allow attendees to rate events and share experiences.
+- **Analytics Dashboard:** Provide organizers with insights into bookings and event engagement.
+- **QR Code Check-In:** Support digital ticket verification at event venues.
 
-| Name | Role |
-|------|------|
-| **Anushka Kotal** | Full Stack Developer |
-| **Bhoomi Koli** | Full Stack Developer |
-| **Jibi Johny** | Full Stack Developer |
-| **Shravani Lad** | Full Stack Developer |
+## Learning Outcomes
 
----
+The project provides practical experience in Java web application development, JSP and Servlet integration, JDBC connectivity, relational database management, session handling, and the organization of application logic using the DAO pattern.
+
+It also demonstrates how separate user roles and reservation workflows can be incorporated into an event management platform.
 
 
-# 🙏 Acknowledgements
+<p align="center">
+  <strong>TorchBearer</strong><br>
+  Discover Events. Connect People. Create Experiences.
+</p>
 
-We sincerely thank our project guide, faculty members, and the Department of Information Technology, St. Francis Institute of Technology, for their continuous guidance and support throughout the development of this project.
-
----
-
-## ⭐ If you found this project useful, consider giving it a star!
-
+<p align="center">
+  If you find this project useful, consider giving the repository a star.
+</p>
